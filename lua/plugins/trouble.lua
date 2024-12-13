@@ -18,5 +18,10 @@ return {
 			"<cmd>Trouble diagnostics previous<cr>",
 			desc = "Previous item",
 		},
+        {
+          "<leader>tQ",
+          "<cmd>Trouble qflist toggle<cr>",
+          desc = "Quickfix List (Trouble)",
+        },
 	},
 }

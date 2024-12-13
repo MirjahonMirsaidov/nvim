@@ -40,6 +40,15 @@ return {
             })
             lspconfig.pyright.setup({
                 capabilities = capabilities,
+                settings = {
+                    python = {
+                        analysis = {
+                            autoSearchPaths = true,
+                            diagnosticMode = "workspace",
+                            useLibraryCodeForTypes = true
+                        }
+                    }
+                }
             })
 
             vim.api.nvim_create_autocmd("LspAttach", {
