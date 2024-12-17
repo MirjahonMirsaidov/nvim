@@ -19,7 +19,7 @@ return {
 			desc = "Previous item",
 		},
         {
-          "<leader>tQ",
+          "<leader>tq",
           "<cmd>Trouble qflist toggle<cr>",
           desc = "Quickfix List (Trouble)",
         },
