@@ -15,6 +15,12 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>pf", vim.lsp.buf.format, {})
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				pattern = "*.py",
+				callback = function()
+					vim.lsp.buf.format({ async = false, timeout_ms = 2000 })
+				end,
+			})
 			-- Command and keybinding for Black formatting
 			vim.api.nvim_create_user_command("FormatBlack", function()
 				vim.cmd("silent !black %")
